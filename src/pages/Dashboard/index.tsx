@@ -36,16 +36,15 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     async function loadTransactions(): Promise<void> {
       const response = await api.get('transactions');
-      console.log(response.data.transactions);
       const transactionsFormatted = response.data.transactions.map(
         (transaction: Transaction) => ({
           ...transaction,
           formattedValue: formatValue(transaction.value),
           formattedDate: new Date(transaction.created_at).toLocaleDateString(
             'pt-br',
-            ),
-          }),
-          );
+          ),
+        }),
+      );
 
       // eslint-disable-next-line no-shadow
       const { income, outcome, total } = response.data.balance;
