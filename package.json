@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "filesize": "^8.0.6",
-    "history": "^4.10.1",
+    "history": "^5.2.0",
     "polished": "^3.5.2",
     "react": "^16.14.0",
     "react-dom": "^16.13.1",
